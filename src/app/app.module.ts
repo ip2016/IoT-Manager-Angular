@@ -4,12 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MainSectionComponent } from './MainSection.component'
+import { SectionMainComponent } from './section-main/section-main.component';
+import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
+import { SensorViewComponent } from './sensor-view/sensor-view.component';
+import { TabContainerComponent } from './tab-container/tab-container.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainSectionComponent
+    SectionMainComponent,
+    NavTabsComponent,
+    SensorViewComponent,
+    TabContainerComponent
   ],
   imports: [
     BrowserModule,

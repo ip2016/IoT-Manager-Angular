@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs">
+	 <li *ngFor="let tab of tabs" role="presentation">
+  		<a href="#sensor1" [attr.id]="tab.id" [attr.aria-controls]="tab.id" role="tab" data-toggle="tab">{{tab.name}}</a>
+	</li>
+</ul>

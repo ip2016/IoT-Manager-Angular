@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MainSectionComponent } from './MainSection.component';
+import { SectionMainComponent } from './section-main/section-main.component';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { MainSectionComponent } from './MainSection.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  section = MainSectionComponent;
+  section = SectionMainComponent;
 }
