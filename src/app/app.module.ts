@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { SectionMainComponent } from './section-main/section-main.component';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 import { SensorViewComponent } from './sensor-view/sensor-view.component';
-import { TabContainerComponent } from './tab-container/tab-container.component'
+import { UnderConstructionComponent } from './under-construction/under-construction.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { TabContainerComponent } from './tab-container/tab-container.component'
     SectionMainComponent,
     NavTabsComponent,
     SensorViewComponent,
-    TabContainerComponent
+    UnderConstructionComponent,
   ],
   imports: [
     BrowserModule,
