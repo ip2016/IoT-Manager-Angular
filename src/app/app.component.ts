@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SectionMainComponent } from './section-main/section-main.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,5 @@ import { SectionMainComponent } from './section-main/section-main.component';
 })
 export class AppComponent {
   section = SectionMainComponent;
+  navbar = NavBarComponent;
 }
