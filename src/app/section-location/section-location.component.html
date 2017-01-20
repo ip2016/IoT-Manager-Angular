@@ -1,3 +1,14 @@
-<p>
-  section-location works!
-</p>
+<div *ngIf="!locationSelected" class="row">
+	<div *ngFor="let location of locations" class="col-md-4 col-xs-6">
+		<div class="panel panel-default" (click)="getSelection(location)">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{location.title}}</h3>
+			</div>
+	  		<div class="panel-body">
+	    		<a href="#">Devices <span class="badge">{{location.devices.length}}</span></a>
+	    		<a href="#">Sensors <span class="badge">{{location.sensors.length}}</span></a>
+	  		</div>
+	  	</div>
+	</div>
+</div>
+<app-nav-tabs *ngIf="locationSelected" [selectedLocation]="selectedLocation"></app-nav-tabs>

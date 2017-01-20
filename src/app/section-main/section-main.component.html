@@ -1,5 +1,9 @@
 <div class="section">
 	<div class="container-fluid">
-		<app-nav-tabs>{{navtab}}</app-nav-tabs>
+		<div [ngSwitch]="selectedId">
+			<app-section-dashboard *ngSwitchCase="'dashboard'"></app-section-dashboard>
+			<app-section-location *ngSwitchCase="'deviceMap'"></app-section-location>
+			<app-under-construction *ngSwitchDefault></app-under-construction>
+		</div>
 	</div>
 </div>

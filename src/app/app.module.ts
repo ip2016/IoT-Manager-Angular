@@ -10,9 +10,7 @@ import { SensorViewComponent } from './sensor-view/sensor-view.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { SectionLocationComponent } from './section-location/section-location.component';
 import { SectionDashboardComponent } from './section-dashboard/section-dashboard.component';
-import { SectionLocationSelectorComponent } from './section-location-selector/section-location-selector.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +21,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     UnderConstructionComponent,
     SectionLocationComponent,
     SectionDashboardComponent,
-    SectionLocationSelectorComponent,
-    SplashScreenComponent,
-    NavBarComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,

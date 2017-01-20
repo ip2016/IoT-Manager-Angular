@@ -1,13 +1,13 @@
 <ul class="nav nav-tabs">
 	 <li *ngFor="let tab of tabs" role="presentation">
-	 		<a [attr.href]="tabRef(tab.id)" [attr.aria-controls]="tab.id" role="tab" data-toggle="tab">{{tab.name}}</a>
+	 		<a [attr.href]="'#'+tab.id" [attr.aria-controls]="tab.id" role="tab" data-toggle="tab" (click)=getSelection(tab.id)>{{tab.name}}</a>
 	</li>
 </ul>
-<div class="tab-content">
+<div class="tab-content tab-content-padding">
 	<div *ngFor="let tab of tabs; let i=index" role="tabpanel" class="tab-pane" [attr.id]="tab.id">
-		<div [ngSwitch]="tab.id">
-			<div *ngSwitchCase="'Sensors'"><app-sensor-view>{{sensorView}}</app-sensor-view></div>
-			<div *ngSwitchDefault><app-under-construction>{{underConstruction}}</app-under-construction></div>
+		<div [ngSwitch]="selectedTab">
+			<app-sensor-view *ngSwitchCase="'Sensors'" [sensorList]="selectedLocation.sensors"></app-sensor-view>
+			<app-under-construction *ngSwitchDefault></app-under-construction>
 		</div>
 	</div>
 </div>

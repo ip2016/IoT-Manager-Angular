@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { SensorViewComponent } from '../sensor-view/sensor-view.component';
-import { UnderConstructionComponent } from '../under-construction/under-construction.component';
+import { Component, OnInit, Input } from '@angular/core';
+import { SectionLocationComponent, DeviceLocation } from '../section-location/section-location.component';
 
 export class Tab {
   id: string;
@@ -22,12 +21,13 @@ export class NavTabsComponent implements OnInit {
 
   constructor() { }
   
-  tabs = TABS;
-  sensorView = SensorViewComponent;
-  underConstruction = UnderConstructionComponent;
+  @Input() selectedLocation: DeviceLocation;
   
-  tabRef(tab : string) {
-    return '#' + tab;
+  tabs = TABS;
+  selectedTab = "Sensors";
+  
+  getSelection(id: string) {
+    this.selectedTab = id;
   }
 
   ngOnInit() {

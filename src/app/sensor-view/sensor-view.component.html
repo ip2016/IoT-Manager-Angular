@@ -1,3 +1,15 @@
-<p>
-  sensor-view works!
-</p>
+<div class="row">
+	<div *ngFor="let sensor of sensorList" class="col-md-4 col-xs-6">
+		<div class="panel {{setStatus(sensor.status).style}}">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					{{sensor.description}}
+					<span class="glyphicon {{setStatus(sensor.status).glyphicon}} right-align" aria-hidden="true"></span>
+				</h3>
+			</div>
+	  		<div class="panel-body">
+	    		{{sensor.name}}
+	  		</div>
+	  	</div>
+	</div>
+</div>

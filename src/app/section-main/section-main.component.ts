@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NavTabsComponent } from '../nav-tabs/nav-tabs.component';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-section-main',
@@ -9,10 +8,10 @@ import { NavTabsComponent } from '../nav-tabs/nav-tabs.component';
 export class SectionMainComponent implements OnInit {
 
   constructor() { }
+  
+  @Input() selectedId: string;
 
   ngOnInit() {
   }
-  
-  navtab = NavTabsComponent;
 }
 

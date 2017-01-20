@@ -1,14 +1,27 @@
 import { Component } from '@angular/core';
-import { SectionMainComponent } from './section-main/section-main.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+export class MenuItems {
+  name: string;
+  id: string;
+}
+
+const ITEMS: MenuItems[] = [
+  { id: 'dashboard', name: 'Dashboard' },
+  { id: 'deviceMap', name: 'Locations' },
+]
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+  
 export class AppComponent {
-  section = SectionMainComponent;
-  navbar = NavBarComponent;
+  menuItems = ITEMS;
+  
+  selectedId = "none";
+  
+  getSelection(id: string) {
+    this.selectedId = id;
+  }
 }
